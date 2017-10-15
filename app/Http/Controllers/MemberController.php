@@ -49,6 +49,7 @@ class MemberController extends Controller
             ;
 
         })
+            ->orderBy('lastname', 'asc')
             ->paginate('25');
 
         return view('members.index', compact('members', 'languages'));
