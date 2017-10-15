@@ -186,11 +186,11 @@
                                 </tr>
                                 <tr>
                                     <td>{!! Form::checkbox('teach_it', 1, null) !!}</td>
-                                    <td>Dirigir entrevistas de práctica</td>
+                                    <td>Enseñar informatica/computacion</td>
                                 </tr>
                                 <tr>
                                     <td>{!! Form::checkbox('career_coach', 1, null) !!}</td>
-                                    <td>Dirigir entrevistas de práctica</td>
+                                    <td>Se un asesor de carreras</td>
                                 </tr>
                             </table>
                         </div>
@@ -452,7 +452,7 @@
                                 </tr>
                                 <tr>
                                     <td>{!! Form::checkbox('mi_educacion', 1, null) !!}</td>
-                                    <td>Educació para un mejor empleo</td>
+                                    <td>Educación para un mejor empleo</td>
                                 </tr>
                             </table>
                         </div>

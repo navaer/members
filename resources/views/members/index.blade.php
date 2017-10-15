@@ -100,6 +100,8 @@
                             <th>Apellido Paterno</th>
                             <th>Apellido Materno</th>
                             <th>Nombre</th>
+                            <th>Estudios</th>
+                            <th>Nivel estudios</th>
                             <th>Acciones</th>
                         </tr>
                         @foreach($members as $member)
@@ -107,6 +109,8 @@
                                 <td>{{$member->lastname}}</td>
                                 <td>{{$member->lastname2}}</td>
                                 <td>{{$member->name}}</td>
+                                <td>{{$member->education->grade}}</td>
+                                <td>{{$member->education->grade_type}}</td>
                                 <td>{{Html::link('members/'.$member->id, 'Ver detalle')}}</td>
                             </tr>
                             @endforeach

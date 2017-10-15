@@ -186,11 +186,11 @@
                                 </tr>
                                 <tr>
                                     <td>{!! Form::checkbox('teach_it', 1, $member->personal->teach_it) !!}</td>
-                                    <td>Dirigir entrevistas de práctica</td>
+                                    <td>Enseñar informatica/computacion</td>
                                 </tr>
                                 <tr>
                                     <td>{!! Form::checkbox('career_coach', 1, $member->personal->career_coach) !!}</td>
-                                    <td>Dirigir entrevistas de práctica</td>
+                                    <td>Se un asesor de carreras</td>
                                 </tr>
                             </table>
                         </div>
