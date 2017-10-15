@@ -23,7 +23,7 @@
 {!! Html::style('css/AdminLTE.min.css') !!}
 
 {!! Html::style('css/_all-skins.min.css') !!}
-    {!! Html::style('css/google_fonts.css') !!}
+{!! Html::style('css/google_fonts.css') !!}
 
 <!-- Theme style -->
 </head>
@@ -47,16 +47,25 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
         </form>
 
-            <a href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                Logout
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                {{ Auth::user()->name }} <span class="caret"></span>
             </a>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-            </form>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
 
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
+            </ul>
+        </li>
     </div>
 </nav>
 
