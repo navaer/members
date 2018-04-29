@@ -8,7 +8,7 @@
                     <div class="panel-heading">Listado de miembros
 
                         <div class="box-tools pull-right">
-                            {{Html::link('members/create', 'Nueva Encuesta', array('class' => 'btn btn-sm btn-primary'))}}
+                            {{Html::link('users/create', 'Nuevo usuario', array('class' => 'btn btn-sm btn-primary'))}}
 
                             <button class="btn btn-sm btn-default" type="button" data-toggle="collapse"
                                     data-target="#collapseExample"
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="collapse panel-heading" id="collapseExample">
-                        {!! Form::open(array('url' => 'members', 'role' => 'form', 'method' => 'get')) !!}
+                        {!! Form::open(array('url' => 'users', 'role' => 'form', 'method' => 'get')) !!}
                         <div class="row">
                             <div class="col-md-4">
                                 <table class="table table-bordered">
@@ -46,7 +46,7 @@
                                     </tr>
                                     <tr>
                                         <th scope=row>{!! Form::label('language', 'Idiomas') !!}</th>
-                                        <td>{!! Form::select('language', $languages, null, ['class' => 'form-control']) !!}</td>
+                                        <td>{!! Form::select('language', [1,2], null, ['class' => 'form-control']) !!}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -86,21 +86,15 @@
 
                         <table class="table table-bordered">
                             <tr>
-                                <th>Apellido Paterno</th>
-                                <th>Apellido Materno</th>
                                 <th>Nombre</th>
-                                <th>Estudios</th>
-                                <th>Nivel estudios</th>
+                                <th>Email</th>
                                 <th>Acciones</th>
                             </tr>
-                            @foreach($members as $member)
+                            @foreach($users as $user)
                                 <tr>
-                                    <td>{{$member->lastname}}</td>
-                                    <td>{{$member->lastname2}}</td>
-                                    <td>{{$member->name}}</td>
-                                    <td>{{$member->education->grade}}</td>
-                                    <td>{{$member->education->grade_type}}</td>
-                                    <td>{{Html::link('members/'.$member->id, 'Ver detalle')}}</td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{Html::link('users/'.$user->id, 'Ver detalle')}}</td>
                                 </tr>
                             @endforeach
                         </table>

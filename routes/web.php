@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 
-Route::resource('members', 'MemberController');
 Auth::routes();
 
 Route::get('/home', 'MemberController@index')->name('home');
+Route::resource('members', 'MemberController');
+Route::resource('users', 'UserController');

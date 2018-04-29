@@ -36,11 +36,25 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        &nbsp;<li>{{ Html::link('members', 'Miembros') }}</li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Administración <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li> {{Html::link('users', 'Usuarios')}}</li>
+                                <li> {{Html::link('roles', 'Roles')}}</li>
+                                <li> {{Html::link('permissions', 'Permisos')}}</li>
+                            </ul>
+                        </li>
+
+
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Acceso</a></li>
@@ -52,6 +66,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    <li>{{Html::link('#', 'Rol: Administrador')}}</li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -72,6 +87,7 @@
         </nav>
 
         @yield('content')
+        @yield('content2')
     </div>
 
     <!-- Scripts -->
