@@ -105,6 +105,7 @@
                             @endforeach
                         </table>
                     </div>
+                    <div class="panel-footer pull-right">{{ $members->links() }}</div>
                 </div>
             </div>
         </div>
