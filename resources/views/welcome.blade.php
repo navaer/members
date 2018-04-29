@@ -100,12 +100,12 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Barrio Las Torres
+            Recursos de Bienestar <br>
+            Estaca Pachuca México Sur
         </div>
 
         <div class="links">
-            <a href="http://clasificados.lastorres.info">Anuncios Clasificados</a>
-            <a href="http://www.lastorres.info">Las Torres</a>
+            <a href="https://www.facebook.com/pachuca.mexico.sur">Facebook</a>
         </div>
     </div>
 </div>

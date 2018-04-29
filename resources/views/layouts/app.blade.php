@@ -35,12 +35,16 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
+                    <!--
                     <ul class="nav navbar-nav">
                         &nbsp;<li>{{ Html::link('members', 'Miembros') }}</li>
                     </ul>
+                    -->
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
+
+                        <!--
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -54,6 +58,7 @@
                             </ul>
                         </li>
 
+                        -->
 
                         <!-- Authentication Links -->
                         @if (Auth::guest())
